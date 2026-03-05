@@ -1,6 +1,6 @@
 // ici nos constants
-
-
+const startButton = document.getElementById("start-button");
+const btns = document.querySelectorAll(".game-btn");
 
 let win = true;
 let score = 0;
@@ -15,20 +15,28 @@ function startGame() {
     let gameRun = true;
     alert("Jeux commencee");
 
-    for (i = 0; i < 11; i++) {
+   
+ 
+    return gameRun, alert;
+}
 
-        if(i===9){
+function game(event){
+
+    for (let i = 0; i < 11; i++) {
+        
+     
+        if(btn===9){
             win;
             statusButton = 1;
             alert("tu as gagnee");
 
         }else{
             win= false;
-            alert("tu as perdue");
+            
         }
     }
- 
-    return gameRun, alert;
+   
+    return btnGame, alert;
 }
 
 
@@ -42,4 +50,5 @@ function startGame() {
 //les id 
 
 
-start.addEventListener("click", startGame);
+startButton.addEventListener("click", startGame);
+btnGame.addEventListener("click", game);
